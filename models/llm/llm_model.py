@@ -81,9 +81,8 @@ def train_model(model, train_loader, val_loader, learning_rate=5e-5, epochs=3):
 if __name__ == "__main__":
     import pandas as pd
 
-    df = pd.read_csv("../data/heart_disease/heart_disease_uci.csv")  # Ensure the dataset is loaded correctly
+    df = pd.read_csv("../../data/heart_disease/heart_disease_uci.csv")  # Ensure the dataset is loaded correctly
     dataset = encode_data(df, tokenizer)
     train_loader, val_loader = create_data_loaders(dataset)
-    model = BertForSequenceClassification.from_pretrained('bert-base-uncased',
-                                                          num_labels=2)  # Adjust num_labels as necessary
+    model = BertForSequenceClassification.from_pretrained('bert-base-uncased',num_labels=2)  # Adjust num_labels as necessary
     train_model(model, train_loader, val_loader)
