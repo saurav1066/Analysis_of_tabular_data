@@ -36,3 +36,10 @@ def encode_categorical_columns(data):
     data[categorical_columns] = encoder.fit_transform(data[categorical_columns])
 
     return data
+
+#Function to convert the num column in the heart disease data to binary
+def convert_num_column(data):
+    # Convert the num column to binary
+    data['num'] = data['num'].apply(lambda x: 1 if x > 0 else 0)
+    return data
+
