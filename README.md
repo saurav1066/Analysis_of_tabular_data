@@ -13,3 +13,5 @@ Apply Sampling During Data Preparation: Integrate the chosen sampling technique 
 Train the LLM with Sampled Data: Train the BERT model using the resampled dataset.
 
 Evaluate and Compare: Evaluate the model performance and compare it with the model trained on the original dataset to study the effects of sampling.
+
+Incorporate stratified sampling as well. wizh male and female
