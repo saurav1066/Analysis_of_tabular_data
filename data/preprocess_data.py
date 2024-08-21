@@ -43,3 +43,32 @@ def convert_num_column(data):
     data['num'] = data['num'].apply(lambda x: 1 if x > 0 else 0)
     return data
 
+# Function to split the data into trsin and test splits and convert them to csv
+def split_data(data, filename):
+    # Split the data into train and test sets
+    train = data.sample(frac=0.8, random_state=42)
+    test = data.drop(train.index)
+
+    # Save the data to CSV
+    train.to_csv(f'data/{filename}_train.csv', index=False)
+    test.to_csv(f'data/{filename}_test.csv', index=False)
+
+
+#Function to preprocess breast cancer data
+def preprocess_breast_cancer_data(data, columns):
+    # Drop rows with missing values
+    data = data.dropna()
+    # Drop duplicate rows
+    data = data.drop_duplicates()
+
+    # Encode the categorical columns
+    data = encode_categorical_columns(data)
+
+    return data
+
+#Function to convert the diagnosis column in the breast cancer data to binary
+def convert_diagnosis_column(data):
+    # Convert the diagnosis column to binary
+    data['diagnosis'] = data['diagnosis'].apply(lambda x: 1 if x == 'M' else 0)
+    return data
+
