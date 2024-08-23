@@ -14,8 +14,8 @@ Train the LLM with Sampled Data: Train the BERT model using the resampled datase
 
 Evaluate and Compare: Evaluate the model performance and compare it with the model trained on the original dataset to study the effects of sampling.
 
-Incorporate stratified sampling as well. wizh male and female
+Incorporate stratified sampling as well. with male and female
 
 
-Todo: Experiment with Mistral LLM hugging face
+Todo: Experiment with Mistral LLM hugging face (This is completed but requires finetuning)
 2. Add Test cases for the LLms
