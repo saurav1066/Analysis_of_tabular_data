@@ -26,6 +26,10 @@ Apart from these which are same for both datasets t here are other files in the 
 results folder contaions all generated predictions
 
 
+### Important: 
+Tokens for Mistral model must be configured for the code to run in the .env file. The account token can be generated : https://huggingface.co/docs/hub/en/security-tokens via here
+
+
 
 
 
