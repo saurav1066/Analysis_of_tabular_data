@@ -1,4 +1,4 @@
-# Abuot the projecrt and how to run it
+# About the project and how to run it
 
 - Data Folder contains data for both datasets in respective folders
 
@@ -6,7 +6,7 @@
 
 - models contains the offloaded mistral model
 
-- contents of notebooks Folder:
+## contents of notebooks Folder:
 
 - The requirements are all mentioned in the requirements.txt
 - There are two different experimentations in notebook folder: main one is for the Heart Disease Dataset and the one inside the breast cancer folder is for the breast cancer dataset
